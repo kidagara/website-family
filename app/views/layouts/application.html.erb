@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>FamilySite</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title><%= full_title yield(:title) %></title>
 
-</body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200,700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+
+
+    <!-- this is the header, to be moved when we cover inserting partials -->
+    <nav class="top-nav">
+      <section id="gradient-top-bar"></section>
+      <div class="top-nav-left">
+        <a href="#">Huntsman Parents</a>
+        <a href="#">Avery Family</a>
+        <a href="#">Holt Family</a>
+      </div>
+      <div class="top-nav-center">
+        <h3>
+          Huntsman<br/>
+          <span class="title">Family Website</span>
+        </h3>
+      </div>
+      <div class="top-nav-right">
+        <a href="#">Huntsman Family</a>
+        <a href="#">Burgess Family</a>
+        <a href="#">Huntsman Boy</a>
+      </div>
+    </nav>
+    <%= yield %>
+
+  </body>
 </html>
